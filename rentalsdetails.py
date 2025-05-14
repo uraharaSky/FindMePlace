@@ -19,18 +19,14 @@ headers = {
 }
 
 driver = webdriver.Chrome()
-driver.get("https://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Bhubaneswar&category=B&parameter=rel&hideviewed=N&ListingsType=I&filterCount=3&incSrc=Y&fromSrc=homeSrc")
+driver.get("https://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Bhubaneswar&language=en")
 
 driver.implicitly_wait(5)
 
 html_content = driver.page_source
 
-with open("property_details.html", "w", encoding="utf-8") as file:
+with open("rentals_details.html", "w", encoding="utf-8") as file:
     file.write(html_content)
 
 
 driver.quit()
-
-
-soup = BeautifulSoup(html_content, "lxml")
-
