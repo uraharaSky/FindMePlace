@@ -1,7 +1,0 @@
-# Ignore Python cache
-__pycache__/
-*.py[cod]
-*.pyo
-
-# Ignore environment variables
-.env
